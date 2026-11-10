@@ -4,15 +4,15 @@ from calculator import *
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
     def test_add(self): # 3 assertions
-        self.assertEqual((add(10, 5), 15))
-        self.assertEqual((add(-1, 1), 0))
-        self.assertEqual((add(-5, -7), -12))
+        self.assertEqual(add(10, 5), 15)
+        self.assertEqual(add(-1, 1), 0)
+        self.assertEqual(add(-5, -7), -12)
 
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual((subtract(10, 5), 5))
-        self.assertEqual((subtract(-1, 1), -2))
-        self.assertEqual((subtract(0, 0), 0))
+        self.assertEqual(subtract(10, 5), 5)
+        self.assertEqual(subtract(-1, 1), -2)
+        self.assertEqual(subtract(0, 0), 0)
 
     ######## Partner 1
     def test_multiply(self):  # 3 assertions
@@ -29,7 +29,7 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 2
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            divide(10, 0)
+            divide(0, 10)
 
     def test_logarithm(self): # 3 assertions
         with self.assertRaises(ValueError):
